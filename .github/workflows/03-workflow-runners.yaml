@@ -1,6 +1,10 @@
 name: 03 Workflow Runners
 on: push
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   ubuntu-job:
     runs-on: ubuntu-latest
@@ -10,7 +14,6 @@ jobs:
 
   windows-job:
     runs-on: windows-latest
-    shell: bash
     steps:
       - name: Windows Runner
         run: |
