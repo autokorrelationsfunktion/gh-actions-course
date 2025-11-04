@@ -26,8 +26,8 @@ jobs:
         run: |
           echo "GitHub Context:"
           echo "${{ toJson(github) }}"
-          echo "Step Environment Variable: $STEP_ENV_VAR"
-          echo "Overwritten Variable: $OVERWRITTEN_VAR"
+          echo "Step Environment Variable: ${{ env.STEP_ENV_VAR }}"
+          echo "Overwritten Variable: ${{ env.OVERWRITTEN_VAR }}"
       - name: Echo Runner Context
         run: |
           echo "Runner Context:"
