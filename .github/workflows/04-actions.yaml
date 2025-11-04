@@ -1,6 +1,10 @@
 name: 04 build action
 on: workflow_dispatch
 
+defaults:
+  run:
+    working-directory: 04-actions/react-app
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,8 +16,6 @@ jobs:
         with:
           node-version: '22.x'
       - name: Install dependencies
-        working-directory: 04-actions/react-app
         run: npm ci
       - name: Run tests
-        working-directory: 04-actions/react-app
         run: npm run test
