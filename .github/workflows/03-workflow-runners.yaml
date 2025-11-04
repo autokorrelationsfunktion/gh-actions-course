@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ubuntu Runner
-        run: echo "This job is running on ${{ RUNNER_OS }}."
+        run: echo "This job is running on $RUNNER_OS."
 
   windows-job:
     runs-on: windows-latest
@@ -23,4 +23,4 @@ jobs:
       - name: macOS Runner
         run: |
           echo "I am a MacOS Runner"
-          echo "This job is running on ${{ RUNNER_OS }}."
+          echo "This job is running on $RUNNER_OS."
