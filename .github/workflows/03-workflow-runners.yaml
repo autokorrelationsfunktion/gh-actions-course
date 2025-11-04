@@ -10,15 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ubuntu Runner
-        run: echo "This job is running on $RUNNER_OS."
+        run: |
+          echo "I am an Ubuntu runner."
+          echo "This job is running on $RUNNER_OS."
 
   windows-job:
     runs-on: windows-latest
     steps:
       - name: Windows Runner
         run: |
-          echo "This job is running on a Windows runner."
-          echo "I am aBASHed"
+          echo "I am a Windows runner."
+          echo "This job is running on $RUNNER_OS."
 
   macos-job:
     runs-on: macos-latest
