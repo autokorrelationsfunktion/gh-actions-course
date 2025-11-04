@@ -1,8 +1,5 @@
 name: 02 Workflow Triggers
 on:
-  schedule:
-    - cron: '* * * * *'
-  push:
   pull_request:
   workflow_dispatch:
 
