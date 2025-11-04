@@ -31,3 +31,8 @@ jobs:
         run: |
           echo "Variable Context:"
           echo "${{ toJson(vars) }}"
+      - name: Echo Secrets
+        run: |
+          echo "Secrets Context:"
+          echo "${{ toJson(secrets) }}"
+
