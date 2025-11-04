@@ -1,0 +1,14 @@
+name: 05 1 Event Filters and Activities
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - main
+  
+
+jobs:
+  name: echo
+  runs-on: ubuntu-latest
+  steps:
+    - name: Echo
+      run: echo "This workflow triggers on opening or synchronizing a PR to the main branch"
