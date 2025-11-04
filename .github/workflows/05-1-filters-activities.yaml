@@ -7,8 +7,8 @@ on:
   
 
 jobs:
-  name: echo
-  runs-on: ubuntu-latest
-  steps:
-    - name: Echo
-      run: echo "This workflow triggers on opening or synchronizing a PR to the main branch"
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: echo "This workflow triggers on opening or synchronizing a PR to the main branch"
