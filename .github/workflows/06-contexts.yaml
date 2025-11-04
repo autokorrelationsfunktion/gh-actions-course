@@ -1,0 +1,33 @@
+name: 06 Contexts
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  echo-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo GitHub Context
+        run: |
+          echo "GitHub Context:"
+          echo "${{ toJson(github) }}"
+      - name: Echo Runner Context
+        run: |
+          echo "Runner Context:"
+          echo "${{ toJson(runner) }}"
+      - name: Echo Job Context
+        run: |
+          echo "Job Context:"
+          echo "${{ toJson(job) }}"
+      - name: Echo Steps Context
+        run: |
+          echo "Steps Context:"
+          echo "${{ toJson(steps) }}"
+      - name: Echo Env Context
+        run: |
+          echo "Env Context:"
+          echo "${{ toJson(env) }}"
+      - name: Echo Variable
+        run: |
+          echo "Variable Context:"
+          echo "${{ toJson(vars) }}"
