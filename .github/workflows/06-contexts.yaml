@@ -1,7 +1,14 @@
 name: 06 Contexts
+run-name: Contexts Demo - ${{ github.workflow }} - ${{ github.run_id }} - ${{ runner.os }}
 on:
   push:
   workflow_dispatch:
+    input:
+      name: debug
+      description: Debugging information
+      required: false
+      default: "false"
+      type: boolean
 
 jobs:
   echo-data:
