@@ -1,0 +1,14 @@
+name: 02 Workflow Triggers
+on:
+  - push
+  - pull_request
+  - workflow_dispatch
+  - schedule:
+    cron: '*/5 * * * *'
+
+jobs:
+  echo-trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Triggered
+        run: echo "This workflow was triggered by a ${{ github.event_name }} event!"
