@@ -2,6 +2,11 @@ name: 06 Contexts
 run-name: Contexts Demo - ${{ github.workflow }} - ${{ github.run_id }} - ${{ inputs.debug }}
 on:
   push:
+    inputs:
+      debug:
+        required: false
+        default: true
+        type: boolean
   workflow_dispatch:
     inputs:
       debug:
