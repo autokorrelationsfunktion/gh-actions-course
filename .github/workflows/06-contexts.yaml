@@ -1,5 +1,5 @@
 name: 06 Contexts
-run-name: Contexts Demo - ${{ github.workflow }} - ${{ github.run_id }} - ${{ runner.os }}
+run-name: Contexts Demo - ${{ github.workflow }} - ${{ github.run_id }}
 on:
   push:
   workflow_dispatch:
