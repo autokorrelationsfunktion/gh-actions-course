@@ -3,11 +3,10 @@ run-name: Contexts Demo - ${{ github.workflow }} - ${{ github.run_id }} - ${{ in
 on:
   push:
   workflow_dispatch:
-    input:
+    inputs:
       debug:
-        description: Debugging information
         required: false
-        default: "false"
+        default: false
         type: boolean
 
 jobs:
