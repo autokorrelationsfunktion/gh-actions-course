@@ -1,0 +1,10 @@
+name: 05 2 Filters on PR close
+on:
+  workflow_dispatch:
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: echo "This workflow triggers on closing a PR to the main branch"
